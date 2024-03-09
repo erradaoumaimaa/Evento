@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    hi users
+    hi admins
 </body>
 </html>

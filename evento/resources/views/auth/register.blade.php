@@ -10,35 +10,28 @@
         </a>
     </div>
     <main class="h-[80vh] p-16 flex flex-col gap-16">
-        <h1 class="text-5xl font-extrabold text-center text-green-700">Sign up as a :</h1>
+        <h1 class="text-5xl font-extrabold text-center text-purple">Sign up as a :</h1>
         <div class="h-full flex flex-col lg:flex-row gap-16">
-            <x-register.card class="" role="company" />
-            <x-register.card role="candidat" />
+            <x-register.card role="organizer" />
+            <x-register.card role="user" />
         </div>
     </main>
 
-    <x-form.layout role="candidat">
-
-        {{--        CANDIDAT INPUTS--}}
-        <x-form.input name="title"/>
-        <x-form.input name="address"/>
-        <x-form.input name="current_position"/>
-        <x-form.input name="about_section" textarea="true"/>
-        <x-form.input name="contact_info" textarea="true"/>
+    <x-form.layout role="organizer">
+        <x-form.input name="name"/>
+        <x-form.input name="email" type="email"/>
+        <x-form.input name="password" type="password"/>
     </x-form.layout>
 
-    <x-form.layout role="company">
-
-{{--                COMPANY INPUTS--}}
-        <x-form.input name="industry"/>
-
-        <x-form.input name="description" textarea="true"/>
-        <x-form.input name="slogan"/>
+    <x-form.layout role="user">
+        <x-form.input name="name"/>
+        <x-form.input name="email" type="email"/>
+        <x-form.input name="password" type="password"/>
     </x-form.layout>
 
     <div id="overlay" class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-full w-full bg-black opacity-[0] z-[-50] transition-all "></div>
 
     @push('scripts')
-        <script src="/js/register.js"></script>
+        <script src="{{ asset('/js/register.js') }}"></script>
     @endpush
 </x-layout>

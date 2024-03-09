@@ -24,14 +24,11 @@
                 theme: {
                     extend: {
                         colors: {
-                            // vert: '#008037',
-                            // oldvert: '#007f5f',
-                            // jaune: '#fde047',
-                            // orange: '#ffb700'
-                            vert: '#008037',
-                            oldvert:'#007F5F',
-                            jaune: '#fde047',
-                            orange: '#ffb700'
+                            purple: '#251048',
+                            red: '#d2142c',
+                            pink: '#e826a0',
+                            yellow: '#f5e10a',
+                            green:'#19a50e'
                         }
                     }
                 }
@@ -48,5 +45,12 @@
         {{ $slot }}
 
     @stack('scripts')
+
+    <script>
+        const showMenu = () => {
+            const menu = document.getElementById('nav-menu');
+            console.log('nav-menu');
+        }
+    </script>
     </body>
 </html>
